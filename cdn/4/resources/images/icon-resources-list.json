@@ -1,0 +1,22 @@
+{
+  "1777439404798.JPG": {
+    "svg": "${appResourceUrl}/images/icon_picker_in_setting/1777439404798.JPG",
+    "properties": {
+      "filename": "1777439404798.JPG",
+      "originalName": "Ball.JPG",
+      "path": "${appResourceUrl}/images/icon_picker_in_setting/1777439404798.JPG",
+      "isUploaded": true,
+      "inlineSvg": false
+    }
+  },
+  "1777641123066.JPG": {
+    "svg": "${appResourceUrl}/images/icon_picker_in_setting/1777641123066.JPG",
+    "properties": {
+      "filename": "1777641123066.JPG",
+      "originalName": "WorldcupLogo.JPG",
+      "path": "${appResourceUrl}/images/icon_picker_in_setting/1777641123066.JPG",
+      "isUploaded": true,
+      "inlineSvg": false
+    }
+  }
+}
