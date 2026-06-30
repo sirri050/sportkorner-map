@@ -1,0 +1,28 @@
+name: Deploy Updated Map
+
+on:
+  push:
+    branches:
+      - main # Change this to 'master' if your default branch uses that name
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to Ubuntu Server via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            cd ~/sportkorner-map
+            # Fetch the latest changes from GitHub without merging them yet
+            git fetch origin main
+            # Forcefully reset local files to match the remote main branch exactly
+            git reset --hard origin/main
+            echo "Successfully reset local changes and synchronized with remote main."
